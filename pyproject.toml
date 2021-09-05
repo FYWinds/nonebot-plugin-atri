@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "nonebot-plugin-atri"
+version = "0.0.1"
+description = "高い性能萝卜子"
+authors = ["风屿 <i@windis.cn>"]
+license = "AGPL-v3"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
