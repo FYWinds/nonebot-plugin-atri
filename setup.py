@@ -12,7 +12,7 @@ def main():
     dis = get_dis()
     setup(
         name="nonebot-plugin-atri",
-        version="0.0.1",
+        version="0.0.2",
         url="https://github.com/FYWinds/nonebot-plugin-atri",
         keywords=["nonebot"],
         description="A ATRI Voice plugin for nonebot2",
