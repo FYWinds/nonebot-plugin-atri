@@ -1,12 +1,14 @@
 [tool.poetry]
 name = "nonebot-plugin-atri"
-version = "0.0.2"
+version = "0.0.3"
 description = "高い性能萝卜子"
 authors = ["风屿 <i@windis.cn>"]
 license = "AGPL-v3"
 
 [tool.poetry.dependencies]
-python = ">=3.8"
+python = ">=3.8, <4.0"
+nonebot2 = "^2.0.0-beta.1"
+nonebot-adapter-onebot = "^2.0.0-beta.1"
 
 [build-system]
 requires = [
