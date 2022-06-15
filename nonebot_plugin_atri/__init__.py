@@ -3,20 +3,21 @@
 import re
 import random
 from difflib import SequenceMatcher
-from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, GROUP, MessageSegment
+from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, GROUP, MessageSegment, Message
 from nonebot.plugin import on_command
+from nonebot.params import CommandArg
 from .data import atri_text
 from .data import V_PATH
 
 __plugin_name__ = "ATRI 语音包"
 __usage__ = "atri"
 
-atri = on_command("atri", permission=GROUP, priority=50)
+atri = on_command("atri", aliases = {"亚托莉"}, permission=GROUP, priority=50)
 
 
 @atri.handle()
-async def _h(bot: Bot, event: GroupMessageEvent):
-    words = str(event.message).strip()
+async def _h(bot: Bot, event: GroupMessageEvent, args: Message = CommandArg()):
+    words = args.extract_plain_text()
     if words:
         diff: dict[str, float] = {}
         for text in atri_text:
